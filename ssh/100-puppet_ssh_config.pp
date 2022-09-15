@@ -1,6 +1,3 @@
-#!/usr/bin/env bash
 # configuration setiitng
-chmod go-rwx ~/.ssh/school
+Host *
 PasswordAuthentication no
-ChallengeResponseAuthentication no
-UsePAM no
