@@ -1,3 +1,3 @@
-# configuration setiitng
-Host *
-PasswordAuthentication no
+host *
+	IdentityFile ~/.ssh/school
+	PasswordAuthentication no
