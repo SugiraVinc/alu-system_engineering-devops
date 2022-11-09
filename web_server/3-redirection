@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
-#Installing nginx and changing contents
-#sudo apt-get -y update
-#sudo apt-get -y install nginx
-#sudo ufw allow 'Nginx HTTP'
-#echo "Holberton School" | sudo tee /var/www/html/index.nginx-debian.html
+Installing nginx and changing contents
+sudo apt-get -y update
+sudo apt-get -y install nginx
+sudo ufw allow 'Nginx HTTP'
+echo "Holberton School" | sudo tee /var/www/html/index.nginx-debian.html
 sudo sed -i "/listen 80 default_server;/a rewrite ^/redirect_me https://github.com/SugiraVinc;" /etc/nginx/sites-enabled/default
 sudo service nginx restart
