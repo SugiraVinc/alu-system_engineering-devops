@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-Installing nginx and changing contents
+#Installing nginx and changing contents
 sudo apt-get -y update
 sudo apt-get -y install nginx
 sudo ufw allow 'Nginx HTTP'
