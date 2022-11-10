@@ -1,0 +1,14 @@
+nstalling nginx and creating error page 404
+REDIR="\\\tlocation /redirect_me {\n\t\t return 301 https://github.com/SugiraVinc;\n\t}\n"
+ERRDIR="\\\n\terror_page 404 /custom_404.html;\n\tlocation = /custom_404.html {\n\t\troot /var/www/html;\n\t\tinternal;\n\t}\n"
+SRC="/etc/nginx/sites-enabled/default"
+HEADER="\\\n\tadd_header X-Served-By \$HOSTNAME;\n"
+apt-get -y update
+apt-get -y install nginx
+sudo service nginx start
+echo "Holberton School" | sudo tee /var/www/html/index.nginx-debian.html
+sudo sed -i "30i $REDIR" $SRC
+sudo sed -i "28i $HEADER" $SRC
+echo "Ceci n'est pas une page" | sudo tee /var/www/html/custom_404.html
+sudo sed -i "40i $ERRDIR" $SRC
+sudo service nginx restart
