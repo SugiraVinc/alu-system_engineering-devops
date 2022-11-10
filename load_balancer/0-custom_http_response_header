@@ -11,5 +11,5 @@ echo "Holberton School" | sudo tee /var/www/html/index.nginx-debian.html
 sudo sed -i "30i $REDIR" $SRC
 sudo sed -i "28i $HEADER" $SRC
 echo "Ceci n'est pas une page" | sudo tee /var/www/html/custom_404.html
-sudo sed -i "40i $ERRDIR" $SRC
+sudo sed -i "48i $ERRDIR" $SRC
 sudo service nginx restart
