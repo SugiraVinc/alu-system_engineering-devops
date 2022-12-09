@@ -5,8 +5,8 @@ service { 'nginx':
 
 exec { 'increase ULIMIT':
   # changing user limit
-  command =>  'sed -i "s/ULIMIT=\"-n 15\"-n 4000\"/g" /etc/default/nginx',
+  command  =>  'sed -i "s/ULIMIT=\"-n 15\"-n 4000\"/g" /etc/default/nginx',
   provider => 'shell',
   # nginx restart
-  notify => Service['nginx']
+  notify   => Service['nginx']
 }
