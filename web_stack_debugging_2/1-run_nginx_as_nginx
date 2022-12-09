@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+#  user access to nginx 
+sudo -u service start nginx
+sudo sed -i -u 's/8080/80/' /etc/nginx/sites-enabled/default
