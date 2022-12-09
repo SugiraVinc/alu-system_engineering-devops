@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
 # Setting up nginx on port 80
-sudo sed -i 's/8080/80/' /etc/nginx/sites-enabled/default
-sudo service nginx start
-sudo service nginx stop
+sudo -i 's/8080/80/' /etc/nginx/sites-enabled/default
+service nginx start
+service nginx stop
