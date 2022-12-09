@@ -8,5 +8,5 @@ exec { 'increase ULIMIT':
   command  => 'sed -i "s/ULIMIT=\"-n 15\"-n 4000\"/g" /etc/default/nginx',
   provider => 'shell',
   # nginx restart
-  notify   => Service['nginx']
+  notify   => Service['nginx'],
 }
