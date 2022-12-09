@@ -1,4 +1,6 @@
 #!/usr/bin/env bash
 #  user access to nginx 
+pkill "apache2"
+chmod 777 /etc/nginx/nginx.config
+sudo sed -i 's/8080/80/' /etc/nginx/sites-enabled/default
 sudo -u service nginx start
-sudo sed -i -u 's/8080/80/' /etc/nginx/sites-enabled/default
